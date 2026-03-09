@@ -18,109 +18,108 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
     <style>
-        :root { --primary: #00d4aa; --primary-dark: #00b894; --secondary: #6c5ce7; --dark: #0a0a0f; --dark-card: #12121a; --dark-border: #1e1e2e; --text: #f5f5f7; --text-muted: #8b8b9a; --gradient: linear-gradient(135deg, #00d4aa 0%, #6c5ce7 100%); }
+        :root { --primary: #2563eb; --primary-dark: #1d4ed8; --primary-light: #3b82f6; --secondary: #6c5ce7; --white: #ffffff; --light-bg: #f8fafc; --light-card: #ffffff; --dark: #0f172a; --dark-card: #1e293b; --dark-border: #334155; --text: #1e293b; --text-muted: #64748b; --gradient: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--dark); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--white); color: var(--text); line-height: 1.6; overflow-x: hidden; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        nav { position: fixed; top: 0; left: 0; right: 0; background: rgba(10, 10, 15, 0.9); backdrop-filter: blur(20px); z-index: 1000; border-bottom: 1px solid var(--dark-border); }
+        nav { position: fixed; top: 0; left: 0; right: 0; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(20px); z-index: 1000; border-bottom: 1px solid #e2e8f0; }
         .nav-content { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
-        .logo { font-size: 1.5rem; font-weight: 800; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); }
         .nav-links { display: flex; gap: 30px; list-style: none; }
         .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 500; transition: color 0.3s; }
         .nav-links a:hover { color: var(--primary); }
-        .nav-cta { background: var(--gradient); color: var(--dark); padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: transform 0.3s, box-shadow 0.3s; }
-        .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0, 212, 170, 0.3); }
-        .hero { padding: 160px 0 100px; text-align: center; position: relative; overflow: hidden; }
-        .hero::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(0, 212, 170, 0.1) 0%, transparent 70%); pointer-events: none; }
-        .hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 20px; line-height: 1.2; }
-        .hero h1 span { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .nav-cta { background: var(--primary); color: var(--white); padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: transform 0.3s, box-shadow 0.3s; }
+        .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3); }
+        .hero { padding: 160px 0 100px; text-align: center; position: relative; overflow: hidden; background: var(--white); }
+        .hero::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(37, 99, 235, 0.05) 0%, transparent 70%); pointer-events: none; }
+        .hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 20px; line-height: 1.2; color: var(--dark); }
+        .hero h1 span { color: var(--primary); }
         .hero p { font-size: 1.25rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 40px; }
         .hero-stats { display: flex; justify-content: center; gap: 60px; margin-top: 60px; }
         .stat { text-align: center; }
         .stat-number { font-size: 2.5rem; font-weight: 800; color: var(--primary); }
         .stat-label { color: var(--text-muted); font-size: 0.9rem; }
-        .features { padding: 80px 0; }
+        .features { padding: 80px 0; background: var(--light-bg); }
         .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
-        .feature-card { background: var(--dark-card); border: 1px solid var(--dark-border); border-radius: 16px; padding: 30px; transition: transform 0.3s, border-color 0.3s; }
-        .feature-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+        .feature-card { background: var(--white); border: 1px solid #e2e8f0; border-radius: 16px; padding: 30px; transition: transform 0.3s, border-color 0.3s; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .feature-card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 10px 40px rgba(37, 99, 235, 0.1); }
         .feature-icon { font-size: 2rem; margin-bottom: 20px; }
-        .feature-card h3 { font-size: 1.25rem; margin-bottom: 10px; }
+        .feature-card h3 { font-size: 1.25rem; margin-bottom: 10px; color: var(--dark); }
         .feature-card p { color: var(--text-muted); font-size: 0.95rem; }
-        .services { padding: 80px 0; }
+        .services { padding: 80px 0; background: var(--white); }
         .section-header { text-align: center; margin-bottom: 60px; }
-        .section-header h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 15px; }
+        .section-header h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 15px; color: var(--dark); }
         .section-header p { color: var(--text-muted); font-size: 1.1rem; }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
-        .service-card { background: var(--dark-card); border: 1px solid var(--dark-border); border-radius: 16px; padding: 40px; transition: transform 0.3s, border-color 0.3s; }
-        .service-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+        .service-card { background: var(--white); border: 1px solid #e2e8f0; border-radius: 16px; padding: 40px; transition: transform 0.3s, border-color 0.3s; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .service-card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 10px 40px rgba(37, 99, 235, 0.1); }
         .service-icon { font-size: 2.5rem; margin-bottom: 20px; }
-        .service-card h3 { font-size: 1.5rem; margin-bottom: 5px; }
+        .service-card h3 { font-size: 1.5rem; margin-bottom: 5px; color: var(--dark); }
         .service-subtitle { font-size: 0.9rem; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; font-weight: 600; }
-        .service-price { font-size: 2rem; font-weight: 700; color: var(--primary); margin-bottom: 20px; }
+        .service-price { font-size: 2rem; font-weight: 700; color: var(--dark); margin-bottom: 20px; }
         .service-price span { font-size: 1rem; color: var(--text-muted); font-weight: 400; }
         .service-features { list-style: none; margin-bottom: 25px; }
         .service-features li { padding: 8px 0; color: var(--text-muted); display: flex; align-items: center; gap: 10px; }
         .service-features li::before { content: '✓'; color: var(--primary); font-weight: 600; }
-        .service-btn { display: inline-block; width: 100%; padding: 14px; background: var(--gradient); color: var(--dark); text-align: center; border-radius: 8px; text-decoration: none; font-weight: 600; transition: transform 0.3s, box-shadow 0.3s; border: none; cursor: pointer; font-size: 1rem; }
-        .service-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0, 212, 170, 0.3); }
-        .agent-teams { padding: 80px 0; background: var(--dark-card); }
+        .service-btn { display: inline-block; width: 100%; padding: 14px; background: var(--primary); color: var(--white); text-align: center; border-radius: 8px; text-decoration: none; font-weight: 600; transition: transform 0.3s, box-shadow 0.3s; border: none; cursor: pointer; font-size: 1rem; }
+        .service-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3); }
+        .agent-teams { padding: 80px 0; background: var(--light-bg); }
         .agent-content { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        .agent-text h2 { font-size: 2.5rem; margin-bottom: 20px; }
+        .agent-text h2 { font-size: 2.5rem; margin-bottom: 20px; color: var(--dark); }
         .agent-text p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 30px; }
         .agent-benefits { display: grid; gap: 20px; }
         .agent-benefit { display: flex; gap: 15px; align-items: flex-start; }
         .agent-benefit-icon { font-size: 1.5rem; flex-shrink: 0; }
-        .agent-benefit h4 { font-size: 1.1rem; margin-bottom: 5px; }
-        .agent-benefit p { font-size: 0.95rem; margin: 0; }
-        .agent-showcase { background: var(--dark); border-radius: 16px; padding: 30px; border: 1px solid var(--dark-border); }
+        .agent-benefit h4 { font-size: 1.1rem; margin-bottom: 5px; color: var(--dark); }
+        .agent-benefit p { font-size: 0.95rem; margin: 0; color: var(--text-muted); }
+        .agent-showcase { background: var(--white); border-radius: 16px; padding: 30px; border: 1px solid #e2e8f0; }
         .agent-showcase h3 { margin-bottom: 20px; font-size: 1.1rem; color: var(--text-muted); }
-        .agent-example { background: var(--dark-card); border-radius: 12px; padding: 20px; margin-bottom: 15px; }
+        .agent-example { background: var(--light-bg); border-radius: 12px; padding: 20px; margin-bottom: 15px; }
         .agent-example-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
         .agent-example-icon { font-size: 1.25rem; }
-        .agent-example-title { font-weight: 600; font-size: 0.95rem; }
+        .agent-example-title { font-weight: 600; font-size: 0.95rem; color: var(--dark); }
         .agent-example p { color: var(--text-muted); font-size: 0.9rem; }
-        .about { padding: 80px 0; }
+        .about { padding: 80px 0; background: var(--white); }
         .about-content { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: center; }
-        .about-image { background: var(--gradient); border-radius: 20px; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-size: 5rem; }
-        .about-text h2 { font-size: 2.5rem; margin-bottom: 20px; }
+        .about-image { background: var(--primary); border-radius: 20px; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-size: 5rem; }
+        .about-text h2 { font-size: 2.5rem; margin-bottom: 20px; color: var(--dark); }
         .about-text > p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 30px; }
         .certifications { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
-        .cert-badge { background: var(--dark-card); border: 1px solid var(--dark-border); padding: 8px 16px; border-radius: 20px; font-size: 0.85rem; color: var(--text-muted); }
+        .cert-badge { background: var(--light-bg); border: 1px solid #e2e8f0; padding: 8px 16px; border-radius: 20px; font-size: 0.85rem; color: var(--text-muted); }
         .about-stats { display: flex; gap: 40px; }
         .about-stat { text-align: center; }
         .about-stat-number { font-size: 2rem; font-weight: 700; color: var(--primary); }
         .about-stat-label { font-size: 0.85rem; color: var(--text-muted); }
-        .faq { padding: 80px 0; background: var(--dark-card); }
+        .faq { padding: 80px 0; background: var(--light-bg); }
         .faq-list { max-width: 800px; margin: 0 auto; }
-        .faq-item { background: var(--dark); border: 1px solid var(--dark-border); border-radius: 12px; margin-bottom: 15px; overflow: hidden; }
-        .faq-question { padding: 20px 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; transition: color 0.3s; background: none; border: none; width: 100%; text-align: left; color: var(--text); font-family: inherit; font-size: inherit; }
+        .faq-item { background: var(--white); border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 15px; overflow: hidden; }
+        .faq-question { padding: 20px 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; transition: color 0.3s; background: none; border: none; width: 100%; text-align: left; color: var(--dark); font-family: inherit; font-size: inherit; }
         .faq-question:hover { color: var(--primary); }
         .faq-question:focus { outline: 2px solid var(--primary); outline-offset: -2px; }
-        .faq-question:hover { color: var(--primary); }
-        .faq-icon { transition: transform 0.3s; }
+        .faq-icon { transition: transform 0.3s; color: var(--primary); }
         .faq-item.active .faq-icon { transform: rotate(45deg); }
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
         .faq-answer-content { padding: 0 25px 20px; color: var(--text-muted); }
         .faq-item.active .faq-answer { max-height: 300px; }
-        .contact { padding: 80px 0; }
+        .contact { padding: 80px 0; background: var(--white); }
         .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
-        .contact-info h2 { font-size: 2.5rem; margin-bottom: 20px; }
+        .contact-info h2 { font-size: 2.5rem; margin-bottom: 20px; color: var(--dark); }
         .contact-info > p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 30px; }
         .contact-details { display: flex; flex-direction: column; gap: 15px; }
         .contact-detail { display: flex; align-items: center; gap: 15px; color: var(--text-muted); }
         .contact-detail-icon { font-size: 1.25rem; }
-        .contact-form { background: var(--dark-card); border: 1px solid var(--dark-border); border-radius: 16px; padding: 40px; }
+        .contact-form { background: var(--white); border: 1px solid #e2e8f0; border-radius: 16px; padding: 40px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
         .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; margin-bottom: 8px; font-weight: 500; }
-        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 14px 16px; background: var(--dark); border: 1px solid var(--dark-border); border-radius: 8px; color: var(--text); font-size: 1rem; font-family: inherit; transition: border-color 0.3s; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 500; color: var(--dark); }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 14px 16px; background: var(--white); border: 1px solid #e2e8f0; border-radius: 8px; color: var(--dark); font-size: 1rem; font-family: inherit; transition: border-color 0.3s; }
         .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--primary); }
         .form-group textarea { min-height: 120px; resize: vertical; }
-        .form-success { display: none; background: rgba(0, 212, 170, 0.1); border: 1px solid var(--primary); border-radius: 8px; padding: 20px; text-align: center; color: var(--primary); }
+        .form-success { display: none; background: rgba(37, 99, 235, 0.1); border: 1px solid var(--primary); border-radius: 8px; padding: 20px; text-align: center; color: var(--primary); }
         .form-success.show { display: block; }
-        footer { padding: 40px 0; border-top: 1px solid var(--dark-border); }
+        footer { padding: 40px 0; background: var(--dark); color: var(--white); }
         .footer-content { display: flex; justify-content: space-between; align-items: center; }
-        .footer-logo { font-size: 1.25rem; font-weight: 700; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        .footer-info { color: var(--text-muted); font-size: 0.9rem; }
+        .footer-logo { font-size: 1.25rem; font-weight: 700; color: var(--white); }
+        .footer-info { color: #94a3b8; font-size: 0.9rem; }
         @media (max-width: 768px) { .nav-links { display: none; } .hero h1 { font-size: 2.5rem; } .hero-stats { flex-wrap: wrap; gap: 30px; } .agent-content, .about-content, .contact-grid { grid-template-columns: 1fr; } .services-grid { grid-template-columns: 1fr; } .footer-content { flex-direction: column; gap: 20px; text-align: center; } }
         html { scroll-behavior: smooth; }
     </style>
@@ -147,11 +146,11 @@
     <section class="hero" id="main-content">
         <div class="container">
             <h1>IT & AI Consulting<br><span>For Businesses in Sydney</span></h1>
-            <p>Stop feeling overwhelmed by AI and modern technology. Get expert guidance from someone with 15 years of IT experience who explains things in plain English.</p>
+            <p>Transform your business with expert IT and AI guidance. We deliver tailored solutions that drive efficiency, reduce costs, and accelerate growth—all explained in clear, straightforward terms.</p>
             <div class="hero-stats">
-                <div class="stat"><div class="stat-number">15+</div><div class="stat-label">Years IT Experience</div></div>
-                <div class="stat"><div class="stat-number">$2M+</div><div class="stat-label">Client Savings</div></div>
-                <div class="stat"><div class="stat-number">500+</div><div class="stat-label">Businesses Helped</div></div>
+                <div class="stat"><div class="stat-number">20+</div><div class="stat-label">Years IT Experience</div></div>
+                <div class="stat"><div class="stat-number">$1M+</div><div class="stat-label">Client Savings</div></div>
+                <div class="stat"><div class="stat-number">Enterprise</div><div class="stat-label">Business Experience</div></div>
                 <div class="stat"><div class="stat-number">100%</div><div class="stat-label">Client Satisfaction</div></div>
             </div>
         </div>
@@ -159,16 +158,16 @@
     <section class="features">
         <div class="container">
             <div class="features-grid">
-                <div class="feature-card"><div class="feature-icon">💬</div><h3>Plain English</h3><p>Zero jargon guarantee. Everything explained in business outcomes, not technical terms.</p></div>
-                <div class="feature-card"><div class="feature-icon">🛠️</div><h3>We Implement</h3><p>Not just advice. We help you actually set up tools, train your team, and integrate systems.</p></div>
-                <div class="feature-card"><div class="feature-icon">📈</div><h3>Scalable Solutions</h3><p>From quick-start packages to enterprise engagements. Solutions tailored to every business size.</p></div>
-                <div class="feature-card"><div class="feature-icon">✅</div><h3>15 Years Experience</h3><p>Deep knowledge across cloud, security, and AI. Proven track record delivering results.</p></div>
+                <div class="feature-card"><div class="feature-icon">💬</div><h3>Clear Communication</h3><p>We translate complex technology into actionable business outcomes. No technical jargon—just results you can understand.</p></div>
+                <div class="feature-card"><div class="feature-icon">🛠️</div><h3>Full Implementation</h3><p>We don't just advise—we build, integrate, and deploy. Your solutions go live with full team training and documentation.</p></div>
+                <div class="feature-card"><div class="feature-icon">📈</div><h3>Scalable Solutions</h3><p>From startups to enterprise organisations, our solutions grow with your business and adapt to changing needs.</p></div>
+                <div class="feature-card"><div class="feature-icon">✅</div><h3>Proven Expertise</h3><p>Two decades of experience across cloud, security, DevOps, and AI. A track record of delivering measurable business results.</p></div>
             </div>
         </div>
     </section>
     <section class="services" id="services">
         <div class="container">
-            <div class="section-header"><h2>Our Services</h2><p>Expert IT and AI solutions tailored to your business needs</p></div>
+            <div class="section-header"><h2>Our Services</h2><p>Comprehensive IT and AI solutions designed to deliver measurable business outcomes</p></div>
             <div class="services-grid">
                 <div class="service-card"><div class="service-icon">🚀</div><h3>AI Quick Start</h3><div class="service-subtitle">Discovery</div><div class="service-price">$1,500 <span>one-time</span></div><ul class="service-features"><li>2-hour discovery consultation</li><li>AI opportunity assessment</li><li>Tool recommendations</li><li>Written roadmap & action plan</li><li>30 days email support</li></ul><a href="#contact" class="service-btn" data-service="AI Quick Start">Get a Quote</a></div>
                 <div class="service-card"><div class="service-icon">⚡</div><h3>AI Implementation</h3><div class="service-subtitle">Full Service</div><div class="service-price">$4,500 <span>full implementation</span></div><ul class="service-features"><li>Everything in Quick Start</li><li>Hands-on setup of 2-3 AI tools</li><li>OpenClaw or similar AI agents</li><li>System integration</li><li>Team training & documentation</li><li>90 days ongoing support</li></ul><a href="#contact" class="service-btn" data-service="AI Implementation">Get a Quote</a></div>
@@ -182,21 +181,22 @@
         <div class="container">
             <div class="agent-content">
                 <div class="agent-text">
-                    <h2>Imagine Having a Tireless Team Working 24/7</h2>
-                    <p>We help you build and orchestrate teams of AI agents that work together to execute complex business workflows, removing toil and freeing your key staff to focus on what actually moves the needle.</p>
+                    <h2>Intelligent Automation That Works Around the Clock</h2>
+                    <p>Deploy sophisticated AI agent teams that handle complex business workflows autonomously. Reduce manual effort, eliminate errors, and free your team to focus on high-value activities that drive growth.</p>
                     <div class="agent-benefits">
-                        <div class="agent-benefit"><div class="agent-benefit-icon">🤝</div><div><h4>Coordinated Agents</h4><p>Multiple specialised agents working together—one handles data extraction, another processes it, a third takes action.</p></div></div>
-                        <div class="agent-benefit"><div class="agent-benefit-icon">⚡</div><div><h4>Eliminate Repetitive Toil</h4><p>Stop wasting your best people on copy-paste work, data entry, report generation, and routine approvals.</p></div></div>
-                        <div class="agent-benefit"><div class="agent-benefit-icon">🎯</div><div><h4>Focus on What Matters</h4><p>Finally tackle that strategic project, customer relationship building, or product innovation.</p></div></div>
-                        <div class="agent-benefit"><div class="agent-benefit-icon">📊</div><div><h4>Any Business Logic</h4><p>Invoice processing, lead qualification, customer onboarding, compliance checks—if there's a process, there's an agent team for it.</p></div></div>
+                        <div class="agent-benefit"><div class="agent-benefit-icon">🤝</div><div><h4>Coordinated Automation</h4><p>Specialised agents working in harmony—one extracts data, another processes it, a third executes actions. Seamless workflow execution.</p></div></div>
+                        <div class="agent-benefit"><div class="agent-benefit-icon">⚡</div><div><h4>Eliminate Manual Tasks</h4><p>Remove repetitive processes from your team's workload. Data entry, report generation, and routine approvals handled automatically.</p></div></div>
+                        <div class="agent-benefit"><div class="agent-benefit-icon">🎯</div><div><h4>Strategic Focus</h4><p>Reclaim time for strategic initiatives, customer relationships, and innovation projects that truly move your business forward.</p></div></div>
+                        <div class="agent-benefit"><div class="agent-benefit-icon">📊</div><div><h4>Versatile Deployment</h4><p>From invoice processing to compliance monitoring, lead qualification to customer onboarding—any process is candidate for automation.</p></div></div>
                     </div>
                 </div>
                 <div class="agent-showcase">
                     <h3>What Can Agent Teams Do?</h3>
-                    <div class="agent-example"><div class="agent-example-header"><span class="agent-example-icon">📨</span><span class="agent-example-title">Process Emails</span></div><p>Process incoming emails and route to the right person with a draft response</p></div>
-                    <div class="agent-example"><div class="agent-example-header"><span class="agent-example-icon">📋</span><span class="agent-example-title">Invoice Processing</span></div><p>Extract data from invoices, validate against POs, and flag discrepancies</p></div>
-                    <div class="agent-example"><div class="agent-example-header"><span class="agent-example-icon">👥</span><span class="agent-example-title">Lead Qualification</span></div><p>Qualify leads, enrich with company data, and schedule follow-ups</p></div>
-                    <div class="agent-example"><div class="agent-example-header"><span class="agent-example-icon">🔄</span><span class="agent-example-title">Data Sync</span></div><p>Sync data between CRM, accounting, and project management tools</p></div>
+                    <div class="agent-example"><div class="agent-example-header"><span class="agent-example-icon">📨</span><span class="agent-example-title">Email Processing</span></div><p>Intelligent routing and draft responses for incoming communications</p></div>
+                    <div class="agent-example"><div class="agent-example-header"><span class="agent-example-icon">📋</span><span class="agent-example-title">Invoice Processing</span></div><p>Automated data extraction, validation, and discrepancy flagging</p></div>
+                    <div class="agent-example"><div class="agent-example-header"><span class="agent-example-icon">👥</span><span class="agent-example-title">Lead Qualification</span></div><p>Automated enrichment and scheduling follow-up activities</p></div>
+                    <div class="agent-example"><div class="agent-example-header"><span class="agent-example-icon">🔄</span><span class="agent-example-title">Data Synchronisation</span></div><p>Bi-directional sync across CRM, accounting, and project tools</p></div>
+                    <div class="agent-example"><div class="agent-example-header"><span class="agent-example-icon">✅</span><span class="agent-example-title">Compliance Monitoring</span></div><p>Proactive alerts for regulatory requirements and deadlines</p></div>
                 </div>
             </div>
         </div>
@@ -207,7 +207,7 @@
                 <div class="about-image">👨‍💼</div>
                 <div class="about-text">
                     <h2>Meet Philip Singh</h2>
-                    <p>Helping businesses save time, money and streamline AI implementation. I bridge the gap between complex technology and real business outcomes.</p>
+                    <p>Delivering enterprise-grade IT and AI solutions to businesses across Sydney. With two decades of experience, I bridge the gap between complex technology and practical business outcomes—translating technical capability into measurable results.</p>
                     <div class="certifications">
                         <span class="cert-badge">Salesforce Certified</span>
                         <span class="cert-badge">AWS Solutions Architect</span>
@@ -219,9 +219,9 @@
                         <span class="cert-badge">Delivery & Implementation</span>
                     </div>
                     <div class="about-stats">
-                        <div class="about-stat"><div class="about-stat-number">15+</div><div class="about-stat-label">Years IT Experience</div></div>
-                        <div class="about-stat"><div class="about-stat-number">500+</div><div class="about-stat-label">Businesses Helped</div></div>
-                        <div class="about-stat"><div class="about-stat-number">$2M+</div><div class="about-stat-label">Client Savings</div></div>
+                        <div class="about-stat"><div class="about-stat-number">20+</div><div class="about-stat-label">Years IT Experience</div></div>
+                        <div class="about-stat"><div class="about-stat-number">Enterprise</div><div class="about-stat-label">Business Experience</div></div>
+                        <div class="about-stat"><div class="about-stat-number">$1M+</div><div class="about-stat-label">Client Savings</div></div>
                     </div>
                 </div>
             </div>
@@ -229,14 +229,14 @@
     </section>
     <section class="faq" id="faq">
         <div class="container">
-            <div class="section-header"><h2>Frequently Asked Questions</h2><p>Got questions? We've got answers.</p></div>
+            <div class="section-header"><h2>Frequently Asked Questions</h2><p>Common questions about our services</p></div>
             <div class="faq-list">
-                <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="faq-1">Do I need to be technical?<span class="faq-icon">+</span></button><div class="faq-answer" id="faq-1"><div class="faq-answer-content">Not at all. We explain everything in plain English and focus on business outcomes. If you're non-technical, you're exactly who we designed these services for.</div></div></div>
-                <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="faq-2">What can AI actually do for my business?<span class="faq-icon">+</span></button><div class="faq-answer" id="faq-2"><div class="faq-answer-content">Automate customer responses, generate content, analyze data, process documents, schedule meetings, qualify leads, and much more. We'll identify what's realistic for YOUR business.</div></div></div>
-                <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="faq-3">How quickly will I see results?<span class="faq-icon">+</span></button><div class="faq-answer" id="faq-3"><div class="faq-answer-content">Most businesses see value within 2-4 weeks. Simple AI implementations can show results in days. We'll give you a realistic timeline during the discovery phase.</div></div></div>
-                <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="faq-4">Do you build custom AI models?<span class="faq-icon">+</span></button><div class="faq-answer" id="faq-4"><div class="faq-answer-content">No. We focus on practical implementations using existing platforms (ChatGPT, Claude, OpenClaw, etc.). This keeps costs down and delivers faster results.</div></div></div>
-                <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="faq-5">What's the difference between the service packages?<span class="faq-icon">+</span></button><div class="faq-answer" id="faq-5"><div class="faq-answer-content">AI Quick Start is for businesses wanting to explore AI. AI Implementation is for those ready to deploy. AI Partner is for ongoing support. Salesforce Implementation is for CRM needs. IT Solutions covers broader technical consulting.</div></div></div>
-                <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="faq-6">What if AI isn't right for my business?<span class="faq-icon">+</span></button><div class="faq-answer" id="faq-6"><div class="faq-answer-content">We'll tell you. We're not here to sell you something you don't need. The AI Quick Start gives you an honest assessment of whether AI makes sense for your business.</div></div></div>
+                <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="faq-1">Do I need technical expertise?<span class="faq-icon">+</span></button><div class="faq-answer" id="faq-1"><div class="faq-answer-content">Not at all. Our approach focuses on business outcomes rather than technical complexity. We ensure every solution is explained in clear, actionable terms regardless of your technical background.</div></div></div>
+                <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="faq-2">What business value can AI deliver?<span class="faq-icon">+</span></button><div class="faq-answer" id="faq-2"><div class="faq-answer-content">AI capabilities span automated customer responses, content generation, data analysis, document processing, meeting scheduling, lead qualification, and more. We'll identify the most impactful opportunities for your specific business.</div></div></div>
+                <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="faq-3">What is the implementation timeline?<span class="faq-icon">+</span></button><div class="faq-answer" id="faq-3"><div class="faq-answer-content">Most implementations deliver measurable value within 2-4 weeks. Simpler solutions can show results within days. We'll provide a realistic timeline during our initial consultation based on your specific requirements.</div></div></div>
+                <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="faq-4">Do you develop custom AI models?<span class="faq-icon">+</span></button><div class="faq-answer" id="faq-4"><div class="faq-answer-content">No. We leverage established AI platforms (ChatGPT, Claude, OpenClaw, and similar) to keep costs manageable and delivery fast. This approach delivers practical results without the complexity of custom model development.</div></div></div>
+                <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="faq-5">How do the service packages differ?<span class="faq-icon">+</span></button><div class="faq-answer" id="faq-5"><div class="faq-answer-content">AI Quick Start is ideal for exploring AI potential. AI Implementation is for organisations ready to deploy. AI Partner provides ongoing optimisation. Salesforce Implementation addresses CRM requirements. IT Solutions covers broader technical consulting needs.</div></div></div>
+                <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="faq-6">What if AI isn't suitable for my business?<span class="faq-icon">+</span></button><div class="faq-answer" id="faq-6"><div class="faq-answer-content">We'll provide honest guidance. The AI Quick Start package includes a thorough assessment of whether AI makes sense for your business—we won't recommend solutions that won't deliver value.</div></div></div>
             </div>
         </div>
     </section>
