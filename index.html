@@ -63,22 +63,24 @@
         .service-features li::before { content: '✓'; color: var(--primary); font-weight: 600; }
         .service-btn { display: inline-block; width: 100%; padding: 14px; background: var(--primary); color: var(--white); text-align: center; border-radius: 8px; text-decoration: none; font-weight: 600; transition: transform 0.3s, box-shadow 0.3s; border: none; cursor: pointer; font-size: 1rem; }
         .service-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3); }
-        .agent-teams { padding: 80px 0; background: var(--light-bg); }
+        .agent-teams { padding: 80px 0; background: var(--dark); }
         .agent-content { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        .agent-text h2 { font-size: 2.5rem; margin-bottom: 20px; color: var(--dark); }
-        .agent-text p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 30px; }
-        .agent-benefits { display: grid; gap: 20px; }
-        .agent-benefit { display: flex; gap: 15px; align-items: flex-start; }
+        .agent-text h2 { font-size: 2.5rem; margin-bottom: 20px; color: var(--white); }
+        .agent-text p { color: #94a3b8; font-size: 1.1rem; margin-bottom: 30px; }
+        .agent-benefits { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .agent-benefit { background: var(--dark-card); border-radius: 12px; padding: 20px; display: flex; gap: 15px; align-items: flex-start; }
         .agent-benefit-icon { font-size: 1.5rem; flex-shrink: 0; }
-        .agent-benefit h4 { font-size: 1.1rem; margin-bottom: 5px; color: var(--dark); }
-        .agent-benefit p { font-size: 0.95rem; margin: 0; color: var(--text-muted); }
-        .agent-showcase { background: var(--white); border-radius: 16px; padding: 30px; border: 1px solid #e2e8f0; }
-        .agent-showcase h3 { margin-bottom: 20px; font-size: 1.1rem; color: var(--text-muted); }
-        .agent-example { background: var(--light-bg); border-radius: 12px; padding: 20px; margin-bottom: 15px; }
+        .agent-benefit h4 { font-size: 1.1rem; margin-bottom: 5px; color: var(--white); }
+        .agent-benefit p { font-size: 0.95rem; margin: 0; color: #94a3b8; }
+        .agent-showcase { background: var(--dark-card); border-radius: 16px; padding: 30px; border: 1px solid var(--dark-border); }
+        .agent-showcase h3 { margin-bottom: 20px; font-size: 1.1rem; color: #94a3b8; }
+        .agent-example { background: var(--dark); border-radius: 12px; padding: 20px; margin-bottom: 15px; }
         .agent-example-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
         .agent-example-icon { font-size: 1.25rem; }
-        .agent-example-title { font-weight: 600; font-size: 0.95rem; color: var(--dark); }
-        .agent-example p { color: var(--text-muted); font-size: 0.9rem; }
+        .agent-example-title { font-weight: 600; font-size: 0.95rem; color: var(--white); }
+        .agent-example p { color: #94a3b8; font-size: 0.9rem; }
+        .agent-cta { text-align: center; margin-top: 40px; }
+        .agent-cta .service-btn { display: inline-block; width: auto; padding: 16px 40px; }
         .about { padding: 80px 0; background: var(--white); }
         .about-content { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: center; }
         .about-image { background: var(--primary); border-radius: 20px; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-size: 5rem; }
@@ -90,36 +92,39 @@
         .about-stat { text-align: center; }
         .about-stat-number { font-size: 2rem; font-weight: 700; color: var(--primary); }
         .about-stat-label { font-size: 0.85rem; color: var(--text-muted); }
-        .faq { padding: 80px 0; background: var(--light-bg); }
+        .faq { padding: 80px 0; background: var(--dark); }
         .faq-list { max-width: 800px; margin: 0 auto; }
-        .faq-item { background: var(--white); border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 15px; overflow: hidden; }
-        .faq-question { padding: 20px 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; transition: color 0.3s; background: none; border: none; width: 100%; text-align: left; color: var(--dark); font-family: inherit; font-size: inherit; }
+        .faq-item { background: var(--dark-card); border: 1px solid var(--dark-border); border-radius: 12px; margin-bottom: 15px; overflow: hidden; }
+        .faq-question { padding: 20px 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; transition: color 0.3s; background: none; border: none; width: 100%; text-align: left; color: var(--white); font-family: inherit; font-size: inherit; }
         .faq-question:hover { color: var(--primary); }
         .faq-question:focus { outline: 2px solid var(--primary); outline-offset: -2px; }
-        .faq-icon { transition: transform 0.3s; color: var(--primary); }
+        .faq-icon { transition: transform 0.3s; color: var(--primary-light); }
         .faq-item.active .faq-icon { transform: rotate(45deg); }
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
-        .faq-answer-content { padding: 0 25px 20px; color: var(--text-muted); }
+        .faq-answer-content { padding: 0 25px 20px; color: #94a3b8; }
         .faq-item.active .faq-answer { max-height: 300px; }
-        .contact { padding: 80px 0; background: var(--white); }
+        .contact { padding: 80px 0; background: var(--dark); }
         .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
-        .contact-info h2 { font-size: 2.5rem; margin-bottom: 20px; color: var(--dark); }
-        .contact-info > p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 30px; }
+        .contact-info h2 { font-size: 2.5rem; margin-bottom: 20px; color: var(--white); }
+        .contact-info > p { color: #94a3b8; font-size: 1.1rem; margin-bottom: 30px; }
         .contact-details { display: flex; flex-direction: column; gap: 15px; }
-        .contact-detail { display: flex; align-items: center; gap: 15px; color: var(--text-muted); }
+        .contact-detail { display: flex; align-items: center; gap: 15px; color: #94a3b8; }
         .contact-detail-icon { font-size: 1.25rem; }
-        .contact-form { background: var(--white); border: 1px solid #e2e8f0; border-radius: 16px; padding: 40px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .contact-form { background: var(--dark-card); border: 1px solid var(--dark-border); border-radius: 16px; padding: 40px; }
         .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; margin-bottom: 8px; font-weight: 500; color: var(--dark); }
-        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 14px 16px; background: var(--white); border: 1px solid #e2e8f0; border-radius: 8px; color: var(--dark); font-size: 1rem; font-family: inherit; transition: border-color 0.3s; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 500; color: var(--white); }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 14px 16px; background: var(--dark); border: 1px solid var(--dark-border); border-radius: 8px; color: var(--white); font-size: 1rem; font-family: inherit; transition: border-color 0.3s; }
         .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--primary); }
         .form-group textarea { min-height: 120px; resize: vertical; }
-        .form-success { display: none; background: rgba(37, 99, 235, 0.1); border: 1px solid var(--primary); border-radius: 8px; padding: 20px; text-align: center; color: var(--primary); }
+        .form-success { display: none; background: rgba(37, 99, 235, 0.2); border: 1px solid var(--primary); border-radius: 8px; padding: 20px; text-align: center; color: var(--primary-light); }
         .form-success.show { display: block; }
-        footer { padding: 40px 0; background: var(--dark); color: var(--white); }
+        footer { padding: 60px 0; background: #0a0a0f; color: var(--white); }
         .footer-content { display: flex; justify-content: space-between; align-items: center; }
-        .footer-logo { font-size: 1.25rem; font-weight: 700; color: var(--white); }
-        .footer-info { color: #94a3b8; font-size: 0.9rem; }
+        .footer-logo { font-size: 1.5rem; font-weight: 700; color: var(--white); }
+        .footer-links { display: flex; gap: 30px; }
+        .footer-links a { color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
+        .footer-links a:hover { color: var(--primary); }
+        .footer-info { color: #64748b; font-size: 0.85rem; text-align: right; }
         @media (max-width: 768px) { .nav-links { display: none; } .hero h1 { font-size: 2.5rem; } .hero-stats { flex-wrap: wrap; gap: 30px; } .agent-content, .about-content, .contact-grid { grid-template-columns: 1fr; } .services-grid { grid-template-columns: 1fr; } .footer-content { flex-direction: column; gap: 20px; text-align: center; } }
         html { scroll-behavior: smooth; }
     </style>
@@ -199,15 +204,18 @@
                     <div class="agent-example"><div class="agent-example-header"><span class="agent-example-icon">👥</span><span class="agent-example-title">Lead Follow-up</span></div><p>Qualify leads and trigger appropriate follow-up actions automatically</p></div>
                     <div class="agent-example"><div class="agent-example-header"><span class="agent-example-icon">🔔</span><span class="agent-example-title">Reminders & Alerts</span></div><p>Monitor deadlines, schedules, and thresholds to send timely notifications</p></div>
                 </div>
+                <div class="agent-cta">
+                    <a href="#contact" class="service-btn" data-service="AI Agent">Discuss AI Agents</a>
+                </div>
             </div>
         </div>
     </section>
     <section class="about" id="about">
         <div class="container">
             <div class="about-content">
-                <div class="about-image">👨‍💼</div>
                 <div class="about-text">
-                    <h2>Meet Philip Singh</h2>
+                    <h2>Meet our team</h2>
+                    <h3>Philip Singh - Managing Director</h3>
                     <p>Delivering enterprise-grade IT and AI solutions to businesses across Australia. With two decades of experience, I bridge the gap between complex technology and practical business outcomes—translating technical capability into measurable results.</p>
                     <div class="certifications">
                         <span class="cert-badge">Salesforce Certified</span>
@@ -245,23 +253,23 @@
         <div class="container">
             <div class="contact-grid">
                 <div class="contact-info">
-                    <h2>Ready to Get Started?</h2>
-                    <p>Book a free consultation and we'll map out how AI and IT solutions can transform your business.</p>
+                    <h2>Let's Talk</h2>
+                    <p>Book a free 30-minute consultation. No sales pitch, just honest conversation about your business challenges.</p>
                     <div class="contact-details">
                         <div class="contact-detail"><span class="contact-detail-icon">📧</span><span>orgdocai@gmail.com</span></div>
                         <div class="contact-detail"><span class="contact-detail-icon">📍</span><span>Sydney, Australia</span></div>
-                        <div class="contact-detail"><span class="contact-detail-icon">⏰</span><span>Response time: Same day (within 24 hours)</span></div>
-                        <div class="contact-detail"><span class="contact-detail-icon">📋</span><span>ABN: 97 471 093 442</span></div>
+                        <div class="contact-detail"><span class="contact-detail-icon">⏰</span><span>Response time: Within 24 hours</span></div>
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="enquiryForm">
+                    <form id="enquiryForm" action="https://formspree.io/f/xpwzgvzy" method="POST">
+                        <input type="hidden" name="_subject" value="New enquiry from High Agency AI website">
                         <div class="form-group"><label for="name">Name *</label><input type="text" id="name" name="name" required></div>
                         <div class="form-group"><label for="email">Email *</label><input type="email" id="email" name="email" required></div>
                         <div class="form-group"><label for="company">Company</label><input type="text" id="company" name="company"></div>
-                        <div class="form-group"><label for="service">Service Interest *</label><select id="service" name="service" required><option value="">Select a service...</option><option value="AI Quick Start">AI Quick Start</option><option value="AI Implementation">AI Implementation</option><option value="AI Partner">AI Partner</option><option value="Salesforce Implementation">Salesforce Implementation</option><option value="IT Solutions">IT Solutions</option></select></div>
-                        <div class="form-group"><label for="message">Message *</label><textarea id="message" name="message" placeholder="Tell us about your business and what you'd like to achieve..." required></textarea></div>
-                        <button type="submit" class="service-btn">Send Enquiry</button>
+                        <div class="form-group"><label for="service">Service Interest *</label><select id="service" name="service" required><option value="">Select a service...</option><option value="AI Agent Implementation">AI Agent Implementation</option><option value="AI Quick Start">AI Quick Start</option><option value="AI Partner">AI Partner</option><option value="Salesforce Implementation">Salesforce Implementation</option><option value="Cloud Platform Architecture">Cloud Platform Architecture</option><option value="Technical Due Diligence">Technical Due Diligence</option></select></div>
+                        <div class="form-group"><label for="message">How can we help? *</label><textarea id="message" name="message" placeholder="Tell us about your business challenges or what you're looking to achieve..." required></textarea></div>
+                        <button type="submit" class="service-btn">Send Message</button>
                     </form>
                     <div class="form-success" id="formSuccess"><h3>✓ Enquiry Sent!</h3><p>Thank you for your interest. We'll be in touch within 24 hours.</p></div>
                 </div>
@@ -270,8 +278,20 @@
     </section>
     <footer>
         <div class="container footer-content">
-            <div class="footer-logo">High Agency AI Services</div>
-            <div class="footer-info"><p>📧 orgdocai@gmail.com | 📍 Sydney, Australia | ABN: 97 471 093 442</p><p>© 2026 High Agency AI Services. All rights reserved.</p></div>
+            <div>
+                <div class="footer-logo">High Agency AI</div>
+                <div class="footer-links">
+                    <a href="#services-packages">Services</a>
+                    <a href="#packages">Packages</a>
+                    <a href="#agent">AI Agents</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-info">
+                <p>© 2026 High Agency AI. ABN: 97 471 093 442. Sydney, Australia.</p>
+                <p>Free consultation • No obligations • Response within 24 hours</p>
+            </div>
         </div>
     </footer>
     <script>
@@ -306,11 +326,10 @@
             });
         });
         
-        // Form validation and submission
-        document.getElementById('enquiryForm').addEventListener('submit', function(e) {
+        // Form submission with Formspree
+        document.getElementById('enquiryForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             
-            // Client-side validation feedback
             const form = this;
             const requiredFields = form.querySelectorAll('[required]');
             let isValid = true;
@@ -323,24 +342,34 @@
                     field.style.borderColor = '';
                 }
                 
-                // Email validation
                 if (field.type === 'email' && field.value) {
                     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                     if (!emailRegex.test(field.value)) {
                         isValid = false;
                         field.style.borderColor = '#ff6b6b';
-                        field.setCustomValidity('Please enter a valid email address');
                     }
                 }
             });
             
             if (isValid) {
-                form.style.display = 'none';
-                document.getElementById('formSuccess').classList.add('show');
-            } else {
-                // Show validation message
-                const firstInvalid = form.querySelector('[style*="border-color: rgb(255, 107, 107)"]');
-                if (firstInvalid) firstInvalid.focus();
+                try {
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: new FormData(form),
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        form.style.display = 'none';
+                        document.getElementById('formSuccess').classList.add('show');
+                    } else {
+                        alert('There was a problem sending your message. Please try again.');
+                    }
+                } catch (error) {
+                    alert('There was a problem sending your message. Please try again.');
+                }
             }
         });
         
@@ -348,7 +377,6 @@
         document.querySelectorAll('#enquiryForm input, #enquiryForm textarea, #enquiryForm select').forEach(field => {
             field.addEventListener('input', () => {
                 field.style.borderColor = '';
-                field.setCustomValidity('');
             });
         });
         
