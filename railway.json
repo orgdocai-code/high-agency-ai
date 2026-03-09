@@ -1,12 +1,10 @@
-﻿{
-  "name": "web",
+{
   "build": {
-    "builder": "NIXPACKS.Builder.Node"
+    "builder": "NIXPACKS.Builder.Simple"
   },
   "deploy": {
     "numReplicas": 1,
     "restartPolicyType": "ON_FAILURE",
-    "restartPolicyMaxRetries": 10,
-    "startCommand": "node server.js"
+    "restartPolicyMaxRetries": 10
   }
 }
