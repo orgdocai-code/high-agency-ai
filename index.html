@@ -46,10 +46,10 @@
         .feature-icon { font-size: 2rem; margin-bottom: 20px; }
         .feature-card h3 { font-size: 1.25rem; margin-bottom: 10px; color: var(--dark); }
         .feature-card p { color: var(--text-muted); font-size: 0.95rem; }
-        .services { padding: 80px 0; background: var(--white); }
-        .section-header { text-align: center; margin-bottom: 60px; }
-        .section-header h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 15px; color: var(--dark); }
-        .section-header p { color: var(--text-muted); font-size: 1.1rem; }
+        .services { padding: 100px 0 80px; background: var(--white); }
+        .section-header { text-align: center; margin-bottom: 40px; padding-top: 20px; }
+        .section-header h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 10px; color: var(--dark); }
+        .section-header p { color: var(--text-muted); font-size: 1.1rem; margin-top: 8px; }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
         .service-card { background: var(--white); border: 1px solid #e2e8f0; border-radius: 16px; padding: 40px; transition: transform 0.3s, border-color 0.3s; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
         .service-card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 10px 40px rgba(37, 99, 235, 0.1); }
@@ -127,6 +127,7 @@
         .footer-info { color: #64748b; font-size: 0.85rem; text-align: right; }
         @media (max-width: 768px) { .nav-links { display: none; } .hero h1 { font-size: 2.5rem; } .hero-stats { flex-wrap: wrap; gap: 30px; } .agent-content, .about-content, .contact-grid { grid-template-columns: 1fr; } .services-grid { grid-template-columns: 1fr; } .footer-content { flex-direction: column; gap: 20px; text-align: center; } }
         html { scroll-behavior: smooth; }
+        section { scroll-margin-top: 80px; }
     </style>
 </head>
 <body>
@@ -139,7 +140,7 @@
         <div class="container nav-content">
             <div class="logo"><span style="color: var(--primary);">High</span> <span style="color: var(--dark);">Agency</span> <span style="color: var(--primary);">AI</span></div>
             <ul class="nav-links">
-                <li><a href="#services">Packages</a></li>
+                <li><a href="#packages">Packages</a></li>
                 <li><a href="#ourservices">Services</a></li>
                 <li><a href="#agent">AI Agents</a></li>
                 <li><a href="#about">About</a></li>
@@ -165,7 +166,7 @@
             <div class="section-header"><h2>AI Consulting Packages</h2><p>Clear deliverables tailored to your needs</p></div>
             <div class="services-grid">
                 <div class="service-card"><div class="service-icon">🚀</div><h3>AI Quick Start</h3><div class="service-subtitle">Discovery</div><div class="service-price">$2,000 <span>one-time</span></div><ul class="service-features"><li>2-hour discovery consultation</li><li>AI opportunity assessment</li><li>Tool recommendations</li><li>Written roadmap & action plan</li><li>30 days email support</li></ul><a href="#contact" class="service-btn" data-service="AI Quick Start">Get a Quote</a></div>
-                <div class="service-card" style="position: relative;"><div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--white); border: 2px solid var(--primary); color: var(--primary); padding: 4px 16px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">Most Popular</div><div class="service-icon">🤖</div><h3>AI Agent Implementation</h3><div class="service-subtitle">OpenClaw</div><div class="service-price">$6,000 <span>full implementation</span></div><ul class="service-features"><li>Everything in Quick Start</li><li>Hands-on setup of OpenClaw</li><li>OpenClaw integration</li><li>Team training & documentation</li><li>30 days ongoing support</li></ul><a href="#contact" class="service-btn" data-service="AI Agent Implementation">Get a Quote</a></div>
+                <div class="service-card" style="position: relative;"><div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--white); border: 3px solid var(--primary); color: var(--primary); padding: 4px 16px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);">Most Popular</div><div class="service-icon">🤖</div><h3>AI Agent Implementation</h3><div class="service-subtitle">OpenClaw</div><div class="service-price">$6,000 <span>full implementation</span></div><ul class="service-features"><li>Everything in Quick Start</li><li>Hands-on setup of OpenClaw</li><li>OpenClaw integration</li><li>Team training & documentation</li><li>30 days ongoing support</li></ul><a href="#contact" class="service-btn" data-service="AI Agent Implementation">Get a Quote</a></div>
                 <div class="service-card"><div class="service-icon">🤝</div><h3>AI Partner</h3><div class="service-subtitle">Ongoing</div><div class="service-price">$350 <span>billable per hour</span></div><ul class="service-features"><li>Ongoing AI advisory</li><li>Unlimited email/chat questions</li><li>Monthly optimization review</li><li>Priority support</li><li>Quarterly strategy sessions</li></ul><a href="#contact" class="service-btn" data-service="AI Partner">Get a Quote</a></div>
                 <div class="service-card"><div class="service-icon">☁️</div><h3>Salesforce Implementation</h3><div class="service-subtitle">Platform</div><div class="service-price">$1,500 <span>daily rate</span></div><ul class="service-features"><li>Salesforce setup & customization</li><li>Platform enhancements</li><li>Data migration</li><li>Workflow automation</li><li>Team training</li><li>Ongoing support</li></ul><a href="#contact" class="service-btn" data-service="Salesforce Implementation">Get a Quote</a></div>
                 <div class="service-card"><div class="service-icon">🖥️</div><h3>Cloud Platform Architecture</h3><div class="service-subtitle">Infrastructure</div><div class="service-price">Custom</div><ul class="service-features"><li>AWS Architecture</li><li>Azure Architecture</li><li>GCP Architecture</li><li>Cloud Migration</li><li>Cost Optimization</li><li>Security & Compliance</li></ul><a href="#contact" class="service-btn" data-service="Cloud Platform Architecture">Get a Quote</a></div>
