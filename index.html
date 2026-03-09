@@ -3,10 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="High Agency AI - Expert IT & AI consulting services in Sydney. AI implementation, Salesforce setup, cloud architecture, and agent team automation. Free consultation available.">
+    <meta name="keywords" content="AI consulting, IT services, Salesforce implementation, AI agents, cloud architecture, Sydney, business automation">
+    <meta property="og:title" content="High Agency AI Services | IT & AI Consulting Sydney">
+    <meta property="og:description" content="Expert IT & AI consulting. AI implementation, Salesforce, cloud architecture. Save time and money with expert guidance.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://highagency.ai">
+    <meta property="og:image" content="https://highagency.ai/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://highagency.ai">
     <title>High Agency AI Services | IT & AI Consulting Sydney</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
     <style>
         :root { --primary: #00d4aa; --primary-dark: #00b894; --secondary: #6c5ce7; --dark: #0a0a0f; --dark-card: #12121a; --dark-border: #1e1e2e; --text: #f5f5f7; --text-muted: #8b8b9a; --gradient: linear-gradient(135deg, #00d4aa 0%, #6c5ce7 100%); }
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -45,8 +55,7 @@
         .service-card:hover { transform: translateY(-5px); border-color: var(--primary); }
         .service-icon { font-size: 2.5rem; margin-bottom: 20px; }
         .service-card h3 { font-size: 1.5rem; margin-bottom: 5px; }
-        .service-subtitle { font-size: 0.85rem; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; font-weight: 600; }
-        .service-subtitle { font-size: 0.9rem; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
+        .service-subtitle { font-size: 0.9rem; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; font-weight: 600; }
         .service-price { font-size: 2rem; font-weight: 700; color: var(--primary); margin-bottom: 20px; }
         .service-price span { font-size: 1rem; color: var(--text-muted); font-weight: 400; }
         .service-features { list-style: none; margin-bottom: 25px; }
@@ -84,7 +93,9 @@
         .faq { padding: 80px 0; background: var(--dark-card); }
         .faq-list { max-width: 800px; margin: 0 auto; }
         .faq-item { background: var(--dark); border: 1px solid var(--dark-border); border-radius: 12px; margin-bottom: 15px; overflow: hidden; }
-        .faq-question { padding: 20px 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; transition: color 0.3s; }
+        .faq-question { padding: 20px 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; transition: color 0.3s; background: none; border: none; width: 100%; text-align: left; color: var(--text); font-family: inherit; font-size: inherit; }
+        .faq-question:hover { color: var(--primary); }
+        .faq-question:focus { outline: 2px solid var(--primary); outline-offset: -2px; }
         .faq-question:hover { color: var(--primary); }
         .faq-icon { transition: transform 0.3s; }
         .faq-item.active .faq-icon { transform: rotate(45deg); }
@@ -115,6 +126,11 @@
     </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <style>
+        .skip-link { position: absolute; top: -40px; left: 0; background: var(--primary); color: var(--dark); padding: 8px 16px; z-index: 1001; text-decoration: none; font-weight: 600; }
+        .skip-link:focus { top: 0; }
+    </style>
     <nav>
         <div class="container nav-content">
             <div class="logo">High Agency AI</div>
@@ -128,7 +144,7 @@
             <a href="#contact" class="nav-cta">Free Consultation</a>
         </div>
     </nav>
-    <section class="hero">
+    <section class="hero" id="main-content">
         <div class="container">
             <h1>IT & AI Consulting<br><span>For Businesses in Sydney</span></h1>
             <p>Stop feeling overwhelmed by AI and modern technology. Get expert guidance from someone with 15 years of IT experience who explains things in plain English.</p>
@@ -215,12 +231,12 @@
         <div class="container">
             <div class="section-header"><h2>Frequently Asked Questions</h2><p>Got questions? We've got answers.</p></div>
             <div class="faq-list">
-                <div class="faq-item"><div class="faq-question">Do I need to be technical?<span class="faq-icon">+</span></div><div class="faq-answer"><div class="faq-answer-content">Not at all. We explain everything in plain English and focus on business outcomes. If you're non-technical, you're exactly who we designed these services for.</div></div></div>
-                <div class="faq-item"><div class="faq-question">What can AI actually do for my business?<span class="faq-icon">+</span></div><div class="faq-answer"><div class="faq-answer-content">Automate customer responses, generate content, analyze data, process documents, schedule meetings, qualify leads, and much more. We'll identify what's realistic for YOUR business.</div></div></div>
-                <div class="faq-item"><div class="faq-question">How quickly will I see results?<span class="faq-icon">+</span></div><div class="faq-answer"><div class="faq-answer-content">Most businesses see value within 2-4 weeks. Simple AI implementations can show results in days. We'll give you a realistic timeline during the discovery phase.</div></div></div>
-                <div class="faq-item"><div class="faq-question">Do you build custom AI models?<span class="faq-icon">+</span></div><div class="faq-answer"><div class="faq-answer-content">No. We focus on practical implementations using existing platforms (ChatGPT, Claude, OpenClaw, etc.). This keeps costs down and delivers faster results.</div></div></div>
-                <div class="faq-item"><div class="faq-question">What's the difference between the service packages?<span class="faq-icon">+</span></div><div class="faq-answer"><div class="faq-answer-content">AI Quick Start is for businesses wanting to explore AI. AI Implementation is for those ready to deploy. AI Partner is for ongoing support. Salesforce Implementation is for CRM needs. IT Solutions covers broader technical consulting.</div></div></div>
-                <div class="faq-item"><div class="faq-question">What if AI isn't right for my business?<span class="faq-icon">+</span></div><div class="faq-answer"><div class="faq-answer-content">We'll tell you. We're not here to sell you something you don't need. The AI Quick Start gives you an honest assessment of whether AI makes sense for your business.</div></div></div>
+                <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="faq-1">Do I need to be technical?<span class="faq-icon">+</span></button><div class="faq-answer" id="faq-1"><div class="faq-answer-content">Not at all. We explain everything in plain English and focus on business outcomes. If you're non-technical, you're exactly who we designed these services for.</div></div></div>
+                <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="faq-2">What can AI actually do for my business?<span class="faq-icon">+</span></button><div class="faq-answer" id="faq-2"><div class="faq-answer-content">Automate customer responses, generate content, analyze data, process documents, schedule meetings, qualify leads, and much more. We'll identify what's realistic for YOUR business.</div></div></div>
+                <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="faq-3">How quickly will I see results?<span class="faq-icon">+</span></button><div class="faq-answer" id="faq-3"><div class="faq-answer-content">Most businesses see value within 2-4 weeks. Simple AI implementations can show results in days. We'll give you a realistic timeline during the discovery phase.</div></div></div>
+                <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="faq-4">Do you build custom AI models?<span class="faq-icon">+</span></button><div class="faq-answer" id="faq-4"><div class="faq-answer-content">No. We focus on practical implementations using existing platforms (ChatGPT, Claude, OpenClaw, etc.). This keeps costs down and delivers faster results.</div></div></div>
+                <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="faq-5">What's the difference between the service packages?<span class="faq-icon">+</span></button><div class="faq-answer" id="faq-5"><div class="faq-answer-content">AI Quick Start is for businesses wanting to explore AI. AI Implementation is for those ready to deploy. AI Partner is for ongoing support. Salesforce Implementation is for CRM needs. IT Solutions covers broader technical consulting.</div></div></div>
+                <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="faq-6">What if AI isn't right for my business?<span class="faq-icon">+</span></button><div class="faq-answer" id="faq-6"><div class="faq-answer-content">We'll tell you. We're not here to sell you something you don't need. The AI Quick Start gives you an honest assessment of whether AI makes sense for your business.</div></div></div>
             </div>
         </div>
     </section>
@@ -258,9 +274,92 @@
         </div>
     </footer>
     <script>
-        document.querySelectorAll('.faq-question').forEach(question => { question.addEventListener('click', () => { const item = question.parentElement; const wasActive = item.classList.contains('active'); document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active')); if (!wasActive) item.classList.add('active'); }); });
-        document.getElementById('enquiryForm').addEventListener('submit', function(e) { e.preventDefault(); this.style.display = 'none'; document.getElementById('formSuccess').classList.add('show'); });
-        document.querySelectorAll('.service-btn[data-service]').forEach(btn => { btn.addEventListener('click', (e) => { e.preventDefault(); const service = btn.getAttribute('data-service'); document.getElementById('service').value = service; document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); }); });
+        // FAQ accordion with accessibility
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const wasActive = item.classList.contains('active');
+                const expanded = !wasActive;
+                
+                // Close all others
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    i.classList.remove('active');
+                    i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                });
+                
+                // Toggle current
+                if (!wasActive) {
+                    item.classList.add('active');
+                    button.setAttribute('aria-expanded', 'true');
+                } else {
+                    button.setAttribute('aria-expanded', 'false');
+                }
+            });
+            
+            // Keyboard support
+            button.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    button.click();
+                }
+            });
+        });
+        
+        // Form validation and submission
+        document.getElementById('enquiryForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Client-side validation feedback
+            const form = this;
+            const requiredFields = form.querySelectorAll('[required]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    isValid = false;
+                    field.style.borderColor = '#ff6b6b';
+                } else {
+                    field.style.borderColor = '';
+                }
+                
+                // Email validation
+                if (field.type === 'email' && field.value) {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(field.value)) {
+                        isValid = false;
+                        field.style.borderColor = '#ff6b6b';
+                        field.setCustomValidity('Please enter a valid email address');
+                    }
+                }
+            });
+            
+            if (isValid) {
+                form.style.display = 'none';
+                document.getElementById('formSuccess').classList.add('show');
+            } else {
+                // Show validation message
+                const firstInvalid = form.querySelector('[style*="border-color: rgb(255, 107, 107)"]');
+                if (firstInvalid) firstInvalid.focus();
+            }
+        });
+        
+        // Clear validation error on input
+        document.querySelectorAll('#enquiryForm input, #enquiryForm textarea, #enquiryForm select').forEach(field => {
+            field.addEventListener('input', () => {
+                field.style.borderColor = '';
+                field.setCustomValidity('');
+            });
+        });
+        
+        // Service button handlers
+        document.querySelectorAll('.service-btn[data-service]').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const service = btn.getAttribute('data-service');
+                document.getElementById('service').value = service;
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
     </script>
 </body>
 </html>
