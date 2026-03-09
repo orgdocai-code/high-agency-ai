@@ -23,6 +23,8 @@
         body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--white); color: var(--text); line-height: 1.6; overflow-x: hidden; }
         .container { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
         nav { position: fixed; top: 0; left: 0; right: 0; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(20px); z-index: 1000; border-bottom: 1px solid #e2e8f0; }
+        .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; padding: 5px; }
+        @media (max-width: 768px) { .mobile-menu-btn { display: block; } }
         .nav-content { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
         .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); }
         .nav-links { display: flex; gap: 30px; list-style: none; }
@@ -125,7 +127,32 @@
         .footer-links a { color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
         .footer-links a:hover { color: var(--primary); }
         .footer-info { color: #64748b; font-size: 0.85rem; text-align: right; }
-        @media (max-width: 768px) { .nav-links { display: none; } .hero h1 { font-size: 2.5rem; } .hero-stats { flex-wrap: wrap; gap: 30px; } .agent-content, .about-content, .contact-grid { grid-template-columns: 1fr; } .services-grid { grid-template-columns: 1fr; } .footer-content { flex-direction: column; gap: 20px; text-align: center; } }
+                @media (max-width: 768px) { 
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; flex-direction: column; padding: 20px; gap: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+            .nav-links.show { display: flex; }
+            .nav-links li { text-align: center; }
+            .mobile-menu-btn { display: block; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; padding: 0 20px; }
+            .hero-stats { flex-wrap: wrap; gap: 20px; justify-content: center; }
+            .stat { min-width: 45%; }
+            .stat-number { font-size: 1.75rem; }
+            .features-grid { grid-template-columns: 1fr; gap: 15px; }
+            .services-grid { grid-template-columns: 1fr; }
+            .agent-content, .about-content, .contact-grid { grid-template-columns: 1fr; }
+            .footer-content { flex-direction: column; gap: 20px; text-align: center; }
+            .section-header h2 { font-size: 1.75rem; }
+            .section-header p { font-size: 0.95rem; }
+            .service-card { padding: 25px 20px; }
+            .service-price { font-size: 1.5rem; }
+            .container { padding: 0 15px; }
+            .faq-question { font-size: 0.95rem; padding: 15px; }
+            .feature-card { padding: 20px; }
+            .agent-showcase { padding: 20px; }
+            .agent-example { padding: 15px; }
+            .contact-form { padding: 25px 20px; }
+            .cert-badge { font-size: 0.7rem; padding: 6px 10px; }
+        }
         html { scroll-behavior: smooth; }
         section { scroll-margin-top: 80px; }
     </style>
@@ -139,6 +166,7 @@
     <nav>
         <div class="container nav-content">
             <div class="logo"><span style="color: var(--primary);">High</span> <span style="color: var(--dark);">Agency</span> <span style="color: var(--primary);">AI</span></div>
+            <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</button>
             <ul class="nav-links">
                 <li><a href="#ourservices">Services</a></li>
                 <li><a href="#packages-anchor">Packages</a></li>
