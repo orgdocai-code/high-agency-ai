@@ -1,6 +1,5 @@
 ﻿{
-  "\": "https://railway.com/railway.schema.json",
-  "name": "high-agency-ai",
+  "name": "web",
   "build": {
     "builder": "NIXPACKS.Builder.Node"
   },
