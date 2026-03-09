@@ -1,16 +1,13 @@
 {
   "name": "high-agency-ai",
   "version": "1.0.0",
-  "description": "",
+  "description": "IT & AI Consulting Website",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "npx serve -l $PORT"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "express": "^5.2.1"
-  }
+  "dependencies": {}
 }
