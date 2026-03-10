@@ -128,48 +128,114 @@
         .footer-links a:hover { color: var(--primary); }
         .footer-info { color: #64748b; font-size: 0.85rem; text-align: right; }
                 @media (max-width: 768px) { 
+            /* Navigation */
             .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; flex-direction: column; padding: 20px; gap: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); z-index: 100; }
             .nav-links.show { display: flex; }
             .nav-links li { text-align: center; }
-            .mobile-menu-btn { display: block; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
-            .hero h1 { font-size: 2rem; }
-            .hero p { font-size: 1rem; padding: 0 20px; }
-            .hero-stats { flex-wrap: wrap; gap: 20px; justify-content: center; }
-            .stat { min-width: 45%; }
-            .stat-number { font-size: 1.75rem; }
-            .features-grid { grid-template-columns: 1fr; gap: 15px; }
-            .services-grid { grid-template-columns: 1fr; }
-            .about-content, .contact-grid { grid-template-columns: 1fr; gap: 30px; }
-            .about-text { text-align: center !important; }
-            .about-text h3 { font-size: 1.3rem; }
-            .contact-grid .contact-info { order: 1; }
-            .contact-grid .contact-form { order: 2; }
-            .footer-content { flex-direction: column; gap: 20px; text-align: center; }
-            .footer-links { flex-wrap: wrap; justify-content: center; gap: 15px; }
-            .section-header h2 { font-size: 1.75rem; }
-            .section-header p { font-size: 0.95rem; }
-            .service-card { padding: 25px 20px; }
+            .mobile-menu-btn { display: block; background: none; border: none; font-size: 1.5rem; cursor: pointer; padding: 10px; }
+            
+            /* Container */
+            .container { padding: 0 15px; max-width: 100%; }
+            
+            /* Hero */
+            .hero { padding: 100px 0 40px; }
+            .hero h1 { font-size: 1.75rem; line-height: 1.3; }
+            .hero p { font-size: 0.95rem; padding: 0 10px; margin-bottom: 25px; }
+            .hero-stats { flex-wrap: wrap; gap: 15px; justify-content: center; margin-top: 30px; }
+            .stat { min-width: 40%; }
+            .stat-number { font-size: 1.5rem; }
+            .stat-label { font-size: 0.8rem; }
+            
+            /* Section Headers */
+            .section-header h2 { font-size: 1.5rem; }
+            .section-header p { font-size: 0.9rem; padding: 0 10px; }
+            
+            /* Features */
+            .features-grid { grid-template-columns: 1fr; gap: 12px; }
+            .features { padding: 40px 0; }
+            .feature-card { padding: 15px; text-align: center; }
+            .feature-icon { font-size: 1.5rem; margin-bottom: 10px; }
+            .feature-card h3 { font-size: 1rem; }
+            .feature-card p { font-size: 0.85rem; }
+            
+            /* Services */
+            .services { padding: 50px 0 40px; }
+            .services-grid { grid-template-columns: 1fr; gap: 20px; }
+            .service-card { padding: 20px 15px; }
+            .service-icon { font-size: 2rem; margin-bottom: 15px; }
+            .service-card h3 { font-size: 1.25rem; }
+            .service-subtitle { font-size: 0.75rem; }
             .service-price { font-size: 1.5rem; }
-            .container { padding: 0 15px; }
-            .faq-question { font-size: 0.95rem; padding: 15px; }
-            .feature-card { padding: 20px; }
-            .agent-showcase { padding: 20px; }
-            .agent-example { padding: 15px; }
-            .contact-form { padding: 25px 20px; }
-            .cert-badge { font-size: 0.7rem; padding: 6px 10px; }
+            .service-features { margin-bottom: 15px; }
+            .service-features li { font-size: 0.85rem; padding: 5px 0; }
+            .service-btn { padding: 12px; font-size: 0.9rem; }
+            
+            /* OrgDocAI */
             .orgdocai { padding: 40px 0; }
-            .orgdocai .section-header h2 { font-size: 1.5rem; }
-            .orgdocai .section-header h3 { font-size: 1rem; }
-            .orgdocai .section-header p { font-size: 0.85rem; }
-            .orgdocai .features-grid { grid-template-columns: 1fr; gap: 8px; }
-            .orgdocai h4 { font-size: 0.85rem; }
-            .orgdocai p { font-size: 0.75rem; }
-            .packages-grid { grid-template-columns: 1fr; }
-            .packages-grid .service-card { margin-bottom: 20px; }
-            .agent-content { grid-template-columns: 1fr; }
+            .orgdocai .section-header h2 { font-size: 1.4rem; }
+            .orgdocai .section-header h3 { font-size: 0.95rem; margin-bottom: 10px; }
+            .orgdocai .section-header p { font-size: 0.8rem; }
+            .orgdocai .features-grid { grid-template-columns: 1fr; gap: 8px; max-width: 100%; }
+            .orgdocai h4 { font-size: 0.8rem; }
+            .orgdocai p { font-size: 0.7rem; }
+            .orgdocai span:first-child { font-size: 0.85rem; }
+            
+            /* Agent Teams */
+            .agent-teams { padding: 40px 0; }
+            .agent-content { grid-template-columns: 1fr; gap: 30px; }
+            .agent-text { text-align: center; }
+            .agent-text h2 { font-size: 1.5rem; }
+            .agent-text p { font-size: 0.9rem; }
+            .agent-benefits { grid-template-columns: 1fr; gap: 12px; }
+            .agent-benefit { padding: 15px; text-align: left; }
+            .agent-showcase { padding: 15px; margin-top: 20px; }
+            .agent-showcase h3 { font-size: 0.9rem; }
+            .agent-example { padding: 12px; margin-bottom: 10px; }
+            .agent-cta { margin-top: 25px; }
+            .agent-cta .service-btn { padding: 12px 25px; font-size: 0.9rem; width: auto; display: inline-block; }
+            
+            /* About */
+            .about { padding: 40px 0; }
+            .about-content { grid-template-columns: 1fr; gap: 25px; }
+            .about-text { text-align: center !important; }
+            .about-text h2 { font-size: 1.5rem; }
+            .about-text h3 { font-size: 1.1rem; }
+            .about-text > p { font-size: 0.9rem; }
+            .certifications { justify-content: center; }
+            .cert-badge { font-size: 0.65rem; padding: 4px 8px; }
+            .about-stats { flex-wrap: wrap; justify-content: center; gap: 20px; }
+            
+            /* FAQ */
             .faq { padding: 40px 0; }
-            h2 { font-size: 1.5rem; }
-            h3 { font-size: 1.1rem; }
+            .faq-question { font-size: 0.9rem; padding: 15px; }
+            .faq-answer-content { font-size: 0.85rem; }
+            
+            /* Contact */
+            .contact { padding: 40px 0; }
+            .contact-grid { grid-template-columns: 1fr; gap: 25px; }
+            .contact-grid .contact-info { order: 1; text-align: center; }
+            .contact-grid .contact-form { order: 2; }
+            .contact-info h2 { font-size: 1.5rem; margin-bottom: 15px; }
+            .contact-info > p { font-size: 0.9rem; margin-bottom: 20px; }
+            .contact-details { align-items: center; }
+            .contact-form { padding: 20px 15px; }
+            .form-group { margin-bottom: 15px; }
+            .form-group label { font-size: 0.9rem; }
+            .form-group input, .form-group select, .form-group textarea { padding: 12px; font-size: 0.9rem; }
+            .form-group textarea { min-height: 100px; }
+            
+            /* Footer */
+            footer { padding: 40px 0; }
+            .footer-content { flex-direction: column; gap: 20px; text-align: center; }
+            .footer-links { flex-wrap: wrap; justify-content: center; gap: 12px; }
+            .footer-links a { font-size: 0.8rem; }
+            .footer-info { text-align: center; font-size: 0.75rem; }
+            
+            /* General */
+            h2 { font-size: 1.4rem; }
+            h3 { font-size: 1rem; }
+            section { scroll-margin-top: 70px; }
+            body { overflow-x: hidden; }
         }
         html { scroll-behavior: smooth; }
         section { scroll-margin-top: 80px; }
