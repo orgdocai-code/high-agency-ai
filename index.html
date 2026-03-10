@@ -128,7 +128,7 @@
         .footer-links a:hover { color: var(--primary); }
         .footer-info { color: #64748b; font-size: 0.85rem; text-align: right; }
                 @media (max-width: 768px) { 
-            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; flex-direction: column; padding: 20px; gap: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; flex-direction: column; padding: 20px; gap: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); z-index: 100; }
             .nav-links.show { display: flex; }
             .nav-links li { text-align: center; }
             .mobile-menu-btn { display: block; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
@@ -139,8 +139,13 @@
             .stat-number { font-size: 1.75rem; }
             .features-grid { grid-template-columns: 1fr; gap: 15px; }
             .services-grid { grid-template-columns: 1fr; }
-            .about-content, .contact-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+            .about-content, .contact-grid { grid-template-columns: 1fr; gap: 30px; }
+            .about-text { text-align: center !important; }
+            .about-text h3 { font-size: 1.3rem; }
+            .contact-grid .contact-info { order: 1; }
+            .contact-grid .contact-form { order: 2; }
             .footer-content { flex-direction: column; gap: 20px; text-align: center; }
+            .footer-links { flex-wrap: wrap; justify-content: center; gap: 15px; }
             .section-header h2 { font-size: 1.75rem; }
             .section-header p { font-size: 0.95rem; }
             .service-card { padding: 25px 20px; }
@@ -152,6 +157,19 @@
             .agent-example { padding: 15px; }
             .contact-form { padding: 25px 20px; }
             .cert-badge { font-size: 0.7rem; padding: 6px 10px; }
+            .orgdocai { padding: 40px 0; }
+            .orgdocai .section-header h2 { font-size: 1.5rem; }
+            .orgdocai .section-header h3 { font-size: 1rem; }
+            .orgdocai .section-header p { font-size: 0.85rem; }
+            .orgdocai .features-grid { grid-template-columns: 1fr; gap: 8px; }
+            .orgdocai h4 { font-size: 0.85rem; }
+            .orgdocai p { font-size: 0.75rem; }
+            .packages-grid { grid-template-columns: 1fr; }
+            .packages-grid .service-card { margin-bottom: 20px; }
+            .agent-content { grid-template-columns: 1fr; }
+            .faq { padding: 40px 0; }
+            h2 { font-size: 1.5rem; }
+            h3 { font-size: 1.1rem; }
         }
         html { scroll-behavior: smooth; }
         section { scroll-margin-top: 80px; }
