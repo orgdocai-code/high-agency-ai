@@ -139,7 +139,7 @@
             .stat-number { font-size: 1.75rem; }
             .features-grid { grid-template-columns: 1fr; gap: 15px; }
             .services-grid { grid-template-columns: 1fr; }
-            .agent-content, .about-content, .contact-grid { grid-template-columns: 1fr; }
+            .about-content, .contact-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
             .footer-content { flex-direction: column; gap: 20px; text-align: center; }
             .section-header h2 { font-size: 1.75rem; }
             .section-header p { font-size: 0.95rem; }
@@ -238,13 +238,13 @@
     </section>
     <section class="about" id="about">
         <div class="container">
-            <div class="about-content" style="grid-template-columns: 1fr; text-align: center;">
-                <div class="about-text" style="max-width: 800px; margin: 0 auto;">
+            <div class="about-content" style="grid-template-columns: 1fr 1fr; gap: 40px; text-align: left;">
+                <div class="about-text" style="max-width: 100%; margin: 0;">
                     <h2>Meet our team</h2>
                     <h3>Philip Singh - Managing Director</h3>
                     <p style="font-size: 1.25rem; color: var(--primary); margin-bottom: 10px;">20+ Years IT Experience</p>
                     <p>Delivering enterprise-grade IT and AI solutions to businesses across Australia. With two decades of experience, I bridge the gap between complex technology and practical business outcomes—translating technical capability into measurable results.</p>
-                    <div class="certifications" style="justify-content: center; flex-wrap: wrap; gap: 8px;">
+                    <div class="certifications" style="justify-content: flex-start; flex-wrap: wrap; gap: 8px;">
                         <span class="cert-badge">☁️ Salesforce Admin (Jun 2016) - ID: 7444844</span>
                         <span class="cert-badge">☁️ Sales Cloud (Feb 2017) - ID: 16886435</span>
                         <span class="cert-badge">☁️ Service Cloud (Jun 2017) - ID: 17349589</span>
@@ -252,6 +252,18 @@
                         <span class="cert-badge">☁️ Community Cloud (Aug 2017) - ID: 17401805</span>
                         <span class="cert-badge">☁️ Field Service (Sep 2017) - ID: 1770045</span>
                         <span class="cert-badge">☁️ Platform App Builder (Dec 2017) - ID: 18027365</span>
+                    </div>
+                </div>
+                <div class="about-text" style="max-width: 100%; margin: 0;">
+                    <h3>Richard Morgan - CTO</h3>
+                    <p style="font-size: 1.25rem; color: var(--primary); margin-bottom: 10px;">20+ Years IT Experience</p>
+                    <p>Leading enterprise cloud architecture and DevOps transformations. Specialising in scalable infrastructure, security, and automation for businesses across Australia.</p>
+                    <div class="certifications" style="justify-content: flex-start; flex-wrap: wrap; gap: 8px;">
+                        <span class="cert-badge">☁️ AWS Solutions Architect</span>
+                        <span class="cert-badge">☁️ Azure Solutions Architect</span>
+                        <span class="cert-badge">ITIL4 Foundation</span>
+                        <span class="cert-badge">Cloud Security</span>
+                        <span class="cert-badge">DevOps Specialist</span>
                     </div>
                 </div>
             </div>
